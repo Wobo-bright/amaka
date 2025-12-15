@@ -2,6 +2,7 @@
 import numpy as np
 import faiss
 import os
+import json
 from pathlib import Path
 from dotenv import load_dotenv
 
@@ -11,15 +12,27 @@ try:
     HAS_GROQ = True
 except ImportError:
     HAS_GROQ = False
+    print("Groq not installed, will use offline mode only.")
 
-def load_groq_key(dotenv_path=None):
-    """
-    Load GROQ_API_KEY from a .env file or environment variables.
-    """
-    if dotenv_path:
-        load_dotenv(dotenv_path=dotenv_path)
+# --- Memory setup ---
+MEMORY_FILE = r"C:\Users\HP\Desktop\meta-hackathon\chat_memory.json"
+if Path(MEMORY_FILE).exists():
+    with open(MEMORY_FILE, "r") as f:
+        chat_memory = json.load(f)
+else:
+    chat_memory = []  # List of {"user": ..., "ai": ...}
+
+def save_memory():
+    with open(MEMORY_FILE, "w") as f:
+        json.dump(chat_memory, f, indent=2)
+
+# --- Loader for API key ---
+def loader(path: str):
+    """Load the GROQ_API_KEY from a .env file and return it."""
+    load_dotenv(path)
     return os.getenv("GROQ_API_KEY")
 
+# --- FAISS ---
 def build_faiss_index(df, embedding_col='embedding'):
     embeddings = np.stack(df[embedding_col].values)
     dim = embeddings.shape[1]
@@ -27,7 +40,8 @@ def build_faiss_index(df, embedding_col='embedding'):
     index.add(embeddings)
     return index
 
-def ask_bot_offline(query, df, model, index, top_k=5, dotenv_path=None):
+# --- Bot with memory ---
+def ask_bot_offline(query, df, model, index, top_k=5, dotenv_path=r"C:\Users\HP\Desktop\meta-hackathon\.env"):
     # Normalize column names
     df.columns = [c.lower().strip() for c in df.columns]
     name_col = next((c for c in df.columns if 'name' in c), None)
@@ -37,41 +51,61 @@ def ask_bot_offline(query, df, model, index, top_k=5, dotenv_path=None):
     if not all([name_col, desc_col, price_col]):
         raise ValueError("Inventory.xlsx must contain Name, Description, and Price columns.")
 
-    # Search FAISS for top-k relevant items
+    # FAISS top-k search
     query_emb = model.encode(query).reshape(1, -1)
     distances, indices = index.search(query_emb, top_k)
 
-    # Prepare context as natural sentences
     context_sentences = [
-        f"We have {df.iloc[i][name_col]} ({df.iloc[i][desc_col]}) for ${df.iloc[i][price_col]}"
+        f"{df.iloc[i][name_col]} ({df.iloc[i][desc_col]}) - ${df.iloc[i][price_col]}"
         for i in indices[0]
     ]
     context = "\n".join(context_sentences)
 
-    # Use Groq if available and API key is found
-    if HAS_GROQ:
-        api_key = load_groq_key(dotenv_path)
-        if api_key:
+    # Include memory in the prompt (last 5 exchanges)
+    memory_context = "\n".join(
+        [f"User: {m['user']}\nAI: {m['ai']}" for m in chat_memory[-5:]]
+    )
+
+    # Load Groq API key
+    api_key = loader(r"C:\Users\HP\Desktop\meta-hackathon\rag_bot\.env")
+    print("Loaded GROQ_API_KEY:", api_key)
+
+    # Attempt Groq API if available
+    if HAS_GROQ and api_key:
+        try:
             client = Groq(api_key=api_key)
             prompt = f"""
-You are a friendly and helpful store assistant. The customer asked: '{query}'
-Based on the inventory below, answer naturally and politely. 
-Mention only relevant items with their name, description, and price. 
-Speak like a real salesperson helping the customer:
+{memory_context}
+A customer asked: '{query}'
+Please respond in a friendly and helpful way, just like a real salesperson. 
+Refer only to items from the inventory below, mentioning their name, description, and price.
+Keep your tone polite and engaging:
+
 
 {context}
 """
-            try:
-                chat_completion = client.chat.completions.create(
-                    messages=[{"role": "user", "content": prompt}],
-                    model="llama-3.3-70b-versatile",
-                    max_tokens=600,
-                    temperature=0.75,
-                )
-                return chat_completion.choices[0].message.content.strip()
-            except Exception:
-                # fallback if Groq fails
-                return context
+            response = client.chat.completions.create(
+                messages=[{"role": "user", "content": prompt}],
+                model="llama-3.3-70b-versatile",
+                max_tokens=600,
+                temperature=0.75,
+            )
+            answer = response.choices[0].message.content.strip()
+            chat_memory.append({"user": query, "ai": answer})
+            save_memory()
+            return answer
+        except Exception as e:
+            print("Groq API call failed:", e)
+            print("Falling back to offline response.")
 
-    # fallback if Groq is not available
-    return context
+    # Offline fallback using FAISS context
+    if context_sentences:
+        answer = "Here are items from our inventory matching your query:\n" + context
+        chat_memory.append({"user": query, "ai": answer})
+        save_memory()
+        return answer
+    else:
+        answer = "Sorry, no relevant items found in inventory."
+        chat_memory.append({"user": query, "ai": answer})
+        save_memory()
+        return answer
