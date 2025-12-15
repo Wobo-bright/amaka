@@ -1,4 +1,11 @@
-groq
-pandas
+fastapi
+uvicorn[standard]
+twilio
+python-dotenv
+faiss-cpu
 numpy
+pandas
+sentence-transformers
+groq
+requests
 openpyxl

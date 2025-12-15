@@ -15,7 +15,7 @@ except ImportError:
     print("Groq not installed, will use offline mode only.")
 
 # --- Memory setup ---
-MEMORY_FILE = r"C:\Users\HP\Desktop\meta-hackathon\chat_memory.json"
+MEMORY_FILE = r"C:\Users\HP\Desktop\meta-hackathon\rag_bot\chat_memory.json"
 if Path(MEMORY_FILE).exists():
     with open(MEMORY_FILE, "r") as f:
         chat_memory = json.load(f)
@@ -108,3 +108,5 @@ Keep your tone polite and engaging, search the web for more context on products 
         chat_memory.append({"user": query, "ai": answer})
         save_memory()
         return answer
+
+

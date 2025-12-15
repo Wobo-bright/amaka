@@ -1,0 +1,78 @@
+[
+  {
+    "user": "is there smoov chap man",
+    "ai": "I couldn't find any \"Smoov Chap Man\" in our inventory. If you're looking for something else, I'd be happy to help. We do have other items available, such as the Purple Bucket, Peanuts, and Fanta. Would you like to know more about these items?"
+  },
+  {
+    "user": "yes",
+    "ai": "I'd be happy to tell you more about the items we have available. We have the Purple Bucket, which is a handy container, priced at $13.2. We also have Peanuts, but I apologize, it seems we don't have any information on those at the moment. However, we do have Fanta, a refreshing drink, available for $146.58. If you're interested in any of these items, I'd be happy to assist you further."
+  },
+  {
+    "user": "i need energy drinks",
+    "ai": "I'd be happy to help you with energy drinks. We have a variety of options available. \n\nWe have the Yellow Energy Drink 1425g, a small 4.61kg energy drink, priced at $85.07. \nWe also have the Red Energy Drink 3140g, a 1.76kg energy drink in a cup, available for $109.36. \nAdditionally, you can choose from the Green Energy Drink 1759g, a small 0.52kg energy drink, for $87.08. \nThe Blue Energy Drink 2344g, a medium 1.27kg energy drink, is priced at $44.85. \nLastly, we have the White Energy Drink 4402g, a 4.2kg energy drink in a roll, available for $94.6.\n\nWhich one of these energy drinks would you like to know more about or purchase?"
+  },
+  {
+    "user": "which ones do you have?",
+    "ai": "I don't have any energy drinks available at the moment. However, I can offer you the Fanta, which is a refreshing drink that might give you a bit of a boost. It's a 4.25kg pack, priced at $146.58. Would you like to know more about it or consider purchasing it?"
+  },
+  {
+    "user": "how about carbonated or fizzy drinks",
+    "ai": "We have a few carbonated or fizzy drink options available. \n\nWe have the Blue Pepsi 738g, a 1.61kg pack, priced at $132.73. \nWe also have the Blue Pepsi 2586g, a 4.06kg box, available for $75.13.\n\nWould you like to know more about these options or consider purchasing one of them?"
+  },
+  {
+    "user": "yes, blue pepsi",
+    "ai": "You're interested in the Blue Pepsi. We have two options available: \n\nThe Blue Pepsi 738g, a 1.61kg pack, priced at $132.73. \nThe Blue Pepsi 2586g, a 4.06kg box, available for $75.13.\n\nWhich one of these would you like to purchase?"
+  },
+  {
+    "user": "give me the one of 738g",
+    "ai": "I'd be happy to assist you with the Blue Pepsi 738g. It's a pack, weighing 1.61kg, and is priced at $132.73. I'll go ahead and prepare your purchase. Would you like to proceed with the payment?"
+  },
+  {
+    "user": "yes",
+    "ai": "You've confirmed that you'd like to proceed with the payment for the Blue Pepsi 738g. I'll just need to finalize the details. The Blue Pepsi 738g is a 1.61kg pack, priced at $132.73. \n\nPlease note that we also have other drink options available, such as the Purple Fanta 3475g, a 4.25kg pack, priced at $146.58, and the Purple Coke 3873g, a 3.52kg roll, priced at $6.37. \n\nWhich payment method would you like to use for your Blue Pepsi 738g purchase?"
+  },
+  {
+    "user": "transfer",
+    "ai": "You've chosen to proceed with a transfer payment for your Blue Pepsi 738g purchase. The total amount due is $132.73. Please confirm the transfer details, and I'll finalize the transaction. If you need any assistance or have questions, feel free to ask."
+  },
+  {
+    "user": "i need the business account number",
+    "ai": "To complete the transfer payment for your Blue Pepsi 738g purchase, I'll provide you with our business account number. Please note that the account details are as follows: \n\nOur business account number is 0827565432. \n\nIf you have any further questions or need assistance, please don't hesitate to ask. Once the transfer is complete, I'll finalize the transaction for your Blue Pepsi 738g, priced at $132.73."
+  },
+  {
+    "user": "what bank?",
+    "ai": "You'd like to know the bank for the transfer. The bank for our business account is City Bank. Please use the account number 0827565432 for the transfer. If you have any further questions or need assistance, please don't hesitate to ask."
+  },
+  {
+    "user": "name of the account?",
+    "ai": "To complete the transfer payment for your Blue Pepsi 738g purchase, I'll provide you with the name of the account. The account is held in the name of \"Beverage Hub\". Please use this information along with the account number 0827565432 at City Bank to complete the transfer. If you have any further questions or need assistance, please don't hesitate to ask."
+  },
+  {
+    "user": "how about cash? which location",
+    "ai": "If you'd prefer to pay in cash, you can visit our location to complete the purchase. We have a variety of items available, including the Silver Toothbrush, a 2.44kg box priced at $81.56, the White Deodorant, a 3.25kg cup priced at $3.52, the Red Deodorant, a 3.75kg roll priced at $75.13, the Red Toothbrush, a 3.38kg pack priced at $58.34, and the Black Deodorant, a 1.38kg tin priced at $16.15. Please let me know which item you'd like to purchase, and I'll provide you with the location details."
+  },
+  {
+    "user": "do you sell t-shirts?",
+    "ai": "I'm happy to help you with your query. Unfortunately, we don't have t-shirts in our current inventory. However, we do have a wide range of deodorants that you might be interested in. \n\nWe have the Black Deodorant, which comes in a 1.38kg tin for $16.15, or a 2.24kg can for $72.28. We also have the Brown Deodorant, which is available in a 4.36kg box for $124.49. If you're looking for something a bit different, you might like the Yellow Deodorant, which is a 1.34kg roll priced at $89.29. Lastly, we have the White Deodorant, which is a 3.25kg cup and is available for just $3.52.\n\nLet me know if any of these options catch your eye, or if you have any other questions. I'm here to help!"
+  },
+  {
+    "user": "how about baby items",
+    "ai": "I'd be happy to help you with baby items. We have a few options available that might interest you. \n\nWe have the Black Baby Diapers, which come in a 4.93kg pack, priced at $63.87. We also have the Blue Baby Diapers, which are available in a 2.9kg pack for $143.46. If you're looking for something a bit smaller, you might like the White Baby Diapers, which come in a 1.1kg bottle for just $11.0.\n\nIn addition to diapers, we also have some baby wipes that you might find useful. We have the Brown Baby Wipes, which come in a 3.12kg bottle for $143.95, as well as the Red Baby Wipes, which are available in a 4.75kg pack for $91.3.\n\nLet me know if any of these options sound like what you're looking for, or if you have any other questions. I'm here to help!"
+  },
+  {
+    "user": "the red is okay",
+    "ai": "Here are items from our inventory matching your query:\nUmbrella (Red Umbrella, Small, 4.18kg) - $126.33\nEnergy Drink 3140g (Red Energy Drink 3140g, Cup, 1.76kg) - $109.36\nUmbrella (Red Umbrella, Small, 4.64kg) - $139.2\nBaby Diapers (Red Baby Diapers, Medium, 0.74kg) - $93.35\nSalt 2345g (Red Salt 2345g, Pack, 0.37kg) - $9.26"
+  },
+  {
+    "user": "do you have burgers?",
+    "ai": "I'm happy to help you with your query about burgers. Unfortunately, we don't have burgers themselves, but we do have a variety of buns that might be a great starting point for building your own delicious burger. \n\nWe have the Green Buns, which are small and come in a 4.71kg package for $137.65. We also have the Brown Buns, which are small and available in a 1.24kg package for $29.9. If you're looking for something a bit larger, you might like the Purple Buns, which are large and come in a 2.86kg package for $37.81. We also have the White Buns, which are large and available in a 2.22kg package for $123.2. Lastly, we have the Yellow Buns, which are large and come in a 0.19kg package for $144.77.\n\nLet me know if any of these options sound like what you're looking for, or if you have any other questions. I'm here to help!"
+  },
+  {
+    "user": "hey",
+    "ai": "Hello! Welcome to our store. I see you're browsing our selection. We have some great items that might interest you. If you're looking for something to keep you dry on a rainy day, you might like our Yellow Umbrella. We have two options available: a 3.18kg cup for $13.7 and a 4.08kg cup for $40.58.\n\nIf you're looking for something a bit more practical, you might like our Yellow Bucket, which is a 1.87kg pack for $55.79. Or, if you're in the mood for something tasty, we have our Yellow Buns, available in a 3.1kg box for $70.39 or a large 0.19kg package for $144.77.\n\nWhat brings you in today? Is there something specific you're looking for, or would you like me to recommend some of our popular items?"
+  },
+  {
+    "user": "i want to buy baby oil",
+    "ai": "Hello there, welcome to our store. I see you're looking for baby oil. We have a wonderful selection of baby oils that are perfect for keeping your little one's skin soft and nourished.\n\nWe have the White Baby Oil, which comes in a 3.82kg can for $126.29. This is a great option if you're looking for a larger quantity. We also have the Red Baby Oil, which is available in a 4.67kg bottle for just $13.25. This is an excellent value for the price.\n\nIf you're looking for something a bit smaller, you might like the Silver Baby Oil, which is a 3.03kg medium-sized option for $18.45. We also have the Brown Baby Oil, which comes in a 3.38kg tin for $47.58. And lastly, we have the Blue Baby Oil, which is a 2.06kg can for $46.51.\n\nAll of our baby oils are gentle and suitable for sensitive skin. Which one of these options sounds like what you're looking for? Or would you like me to recommend one based on your specific needs?"
+  }
+]
