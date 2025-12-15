@@ -68,7 +68,6 @@ def ask_bot_offline(query, df, model, index, top_k=5, dotenv_path=r"C:\Users\HP\
 
     # Load Groq API key
     api_key = loader(r"C:\Users\HP\Desktop\meta-hackathon\rag_bot\.env")
-    print("Loaded GROQ_API_KEY:", api_key)
 
     # Attempt Groq API if available
     if HAS_GROQ and api_key:
@@ -79,7 +78,7 @@ def ask_bot_offline(query, df, model, index, top_k=5, dotenv_path=r"C:\Users\HP\
 A customer asked: '{query}'
 Please respond in a friendly and helpful way, just like a real salesperson. 
 Refer only to items from the inventory below, mentioning their name, description, and price.
-Keep your tone polite and engaging:
+Keep your tone polite and engaging, search the web for more context on products if you do not know about them:
 
 
 {context}
@@ -88,7 +87,7 @@ Keep your tone polite and engaging:
                 messages=[{"role": "user", "content": prompt}],
                 model="llama-3.3-70b-versatile",
                 max_tokens=600,
-                temperature=0.75,
+                temperature=0.5,
             )
             answer = response.choices[0].message.content.strip()
             chat_memory.append({"user": query, "ai": answer})
