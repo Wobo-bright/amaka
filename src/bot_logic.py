@@ -5,6 +5,8 @@ import os
 import json
 from pathlib import Path
 from dotenv import load_dotenv
+import pandas as pd
+from sentence_transformers import SentenceTransformer
 
 # Try to import Groq; set a flag if unavailable
 try:
@@ -14,25 +16,36 @@ except ImportError:
     HAS_GROQ = False
     print("Groq not installed, will use offline mode only.")
 
-# --- Memory setup ---
-MEMORY_FILE = r"C:\Users\HP\Desktop\meta-hackathon\rag_bot\chat_memory.json"
-if Path(MEMORY_FILE).exists():
+
+BASE_DIR = Path(__file__).resolve().parent.parent
+MEMORY_FILE = BASE_DIR / "chat_memory.json"
+ENV_PATH = BASE_DIR / ".env"
+DATA_PATH = BASE_DIR / "data" / "inventory.xlsx"
+MODEL_NAME = "sentence-transformers/all-MiniLM-L6-v2"
+_RESOURCE_CACHE = None
+
+if MEMORY_FILE.exists():
     with open(MEMORY_FILE, "r") as f:
         chat_memory = json.load(f)
 else:
     chat_memory = []  # List of {"user": ..., "ai": ...}
 
-def save_memory():
-    with open(MEMORY_FILE, "w") as f:
-        json.dump(chat_memory, f, indent=2)
 
-# --- Loader for API key ---
-def loader(path: str):
+def save_memory():
+    try:
+        MEMORY_FILE.parent.mkdir(parents=True, exist_ok=True)
+        with open(MEMORY_FILE, "w") as f:
+            json.dump(chat_memory, f, indent=2)
+    except OSError as exc:
+        print(f"Unable to write chat history to {MEMORY_FILE}: {exc}")
+
+
+def loader(path: Path = ENV_PATH):
     """Load the GROQ_API_KEY from a .env file and return it."""
     load_dotenv(path)
     return os.getenv("GROQ_API_KEY")
 
-# --- FAISS ---
+
 def build_faiss_index(df, embedding_col='embedding'):
     embeddings = np.stack(df[embedding_col].values)
     dim = embeddings.shape[1]
@@ -40,8 +53,33 @@ def build_faiss_index(df, embedding_col='embedding'):
     index.add(embeddings)
     return index
 
-# --- Bot with memory ---
-def ask_bot_offline(query, df, model, index, top_k=5, dotenv_path=r"C:\Users\HP\Desktop\meta-hackathon\.env"):
+
+def prepare_resources(data_path: Path = DATA_PATH, model_name: str = MODEL_NAME):
+    """
+    Load inventory data, compute embeddings if missing, and build a FAISS index.
+    Resources are cached so they are only prepared once per process.
+    """
+    global _RESOURCE_CACHE
+    if _RESOURCE_CACHE is not None:
+        return _RESOURCE_CACHE
+
+    df = pd.read_excel(data_path)
+    df.columns = [c.lower().strip() for c in df.columns]
+
+    desc_col = next((c for c in df.columns if 'desc' in c), None)
+    if desc_col is None:
+        raise ValueError("Inventory.xlsx must contain a Description column.")
+
+    model = SentenceTransformer(model_name)
+    if "embedding" not in df.columns:
+        df["embedding"] = df[desc_col].apply(lambda x: model.encode(x))
+
+    index = build_faiss_index(df)
+    _RESOURCE_CACHE = (df, model, index)
+    return _RESOURCE_CACHE
+
+
+def ask_bot_offline(query, df, model, index, top_k=5, dotenv_path: Path = ENV_PATH):
     # Normalize column names
     df.columns = [c.lower().strip() for c in df.columns]
     name_col = next((c for c in df.columns if 'name' in c), None)
@@ -67,7 +105,7 @@ def ask_bot_offline(query, df, model, index, top_k=5, dotenv_path=r"C:\Users\HP\
     )
 
     # Load Groq API key
-    api_key = loader(r"C:\Users\HP\Desktop\meta-hackathon\rag_bot\.env")
+    api_key = loader(dotenv_path)
 
     # Attempt Groq API if available
     if HAS_GROQ and api_key:
@@ -108,5 +146,3 @@ Keep your tone polite and engaging, search the web for more context on products 
         chat_memory.append({"user": query, "ai": answer})
         save_memory()
         return answer
-
-

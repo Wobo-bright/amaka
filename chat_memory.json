@@ -74,5 +74,45 @@
   {
     "user": "i want to buy baby oil",
     "ai": "Hello there, welcome to our store. I see you're looking for baby oil. We have a wonderful selection of baby oils that are perfect for keeping your little one's skin soft and nourished.\n\nWe have the White Baby Oil, which comes in a 3.82kg can for $126.29. This is a great option if you're looking for a larger quantity. We also have the Red Baby Oil, which is available in a 4.67kg bottle for just $13.25. This is an excellent value for the price.\n\nIf you're looking for something a bit smaller, you might like the Silver Baby Oil, which is a 3.03kg medium-sized option for $18.45. We also have the Brown Baby Oil, which comes in a 3.38kg tin for $47.58. And lastly, we have the Blue Baby Oil, which is a 2.06kg can for $46.51.\n\nAll of our baby oils are gentle and suitable for sensitive skin. Which one of these options sounds like what you're looking for? Or would you like me to recommend one based on your specific needs?"
+  },
+  {
+    "user": "What is available?",
+    "ai": "Here are items from our inventory matching your query:\nSponge Pack (Orange Sponge Pack, Pack, 4.94kg) - $118.22\nToothbrush (Orange Toothbrush, Pack, 3.82kg) - $133.47\nToothbrush (Purple Toothbrush, Medium, 4.48kg) - $102.21\nDeodorant (White Deodorant, Bottle, 4.52kg) - $60.25\nDeodorant (Black Deodorant, Tin, 1.38kg) - $16.15"
+  },
+  {
+    "user": "Nice",
+    "ai": "Here are items from our inventory matching your query:\nCoke 1299g (Purple Coke 1299g, Tin, 4.32kg) - $31.06\nFanta 3475g (Purple Fanta 3475g, Pack, 4.25kg) - $146.58\nCoke 3873g (Purple Coke 3873g, Roll, 3.52kg) - $6.37\nCoke 754g (Purple Coke 754g, Small, 3.19kg) - $146.34\nCoke 2383g (Purple Coke 2383g, Pack, 0.82kg) - $58.27"
+  },
+  {
+    "user": "e",
+    "ai": "Here are items from our inventory matching your query:\nLED Bulb (Yellow LED Bulb, Cup, 2.28kg) - $92.87\nLED Bulb (Yellow LED Bulb, Cup, 2.32kg) - $72.05\nBeans 3907g (Red Beans 3907g, Pack, 3.52kg) - $115.56\nBucket (Yellow Bucket, Pack, 1.87kg) - $55.79\nBeans 2178g (Red Beans 2178g, Small, 2.72kg) - $75.33"
+  },
+  {
+    "user": "a",
+    "ai": "Here are items from our inventory matching your query:\nAA Batteries (Orange AA Batteries, Bottle, 4.23kg) - $90.1\nAA Batteries (Black AA Batteries, Cup, 2.7kg) - $65.88\nAA Batteries (Red AA Batteries, Bottle, 2.97kg) - $57.25\nAA Batteries (Red AA Batteries, Cup, 1.25kg) - $100.4\nAA Batteries (Red AA Batteries, Medium, 1.38kg) - $31.5"
+  },
+  {
+    "user": "What don't ypi have?",
+    "ai": "Here are items from our inventory matching your query:\nApple Juice 4687g (Green Apple Juice 4687g, Pack, 1.46kg) - $148.94\nBaby Diapers (Blue Baby Diapers, Small, 2.9kg) - $143.46\nSponge Pack (Orange Sponge Pack, Pack, 4.94kg) - $118.22\nCotton Buds (Orange Cotton Buds, Medium, 3.84kg) - $88.45\nCotton Buds (Purple Cotton Buds, Small, 3.51kg) - $144.83"
+  },
+  {
+    "user": "What is the cheapest drink to get?",
+    "ai": "Here are items from our inventory matching your query:\nEnergy Drink 1611g (Black Energy Drink 1611g, Tin, 4.18kg) - $145.4\nDeodorant (White Deodorant, Cup, 0.22kg) - $10.98\nDeodorant (White Deodorant, Cup, 3.25kg) - $3.52\nApple Juice 1592g (Purple Apple Juice 1592g, Small, 0.95kg) - $5.32\nApple Juice 705g (White Apple Juice 705g, Pack, 1.08kg) - $62.51"
+  },
+  {
+    "user": "Do you have diapers?",
+    "ai": "Here are items from our inventory matching your query:\nBaby Diapers (White Baby Diapers, Small, 4.89kg) - $23.08\nBaby Diapers (Black Baby Diapers, Small, 4.93kg) - $63.87\nBaby Diapers (Blue Baby Diapers, Small, 2.9kg) - $143.46\nBaby Diapers (Brown Baby Diapers, Large, 1.84kg) - $141.48\nBaby Diapers (White Baby Diapers, Can, 1.27kg) - $132.85"
+  },
+  {
+    "user": "What is the cheapest thing in stock?",
+    "ai": "Here are items from our inventory matching your query:\nAir Freshener (Silver Air Freshener, Medium, 2.87kg) - $128.89\nAir Freshener (Black Air Freshener, Box, 1.24kg) - $52.78\nToothbrush (Silver Toothbrush, Box, 2.44kg) - $81.56\nDeodorant (Brown Deodorant, Box, 4.36kg) - $124.49\nBread Loaf (Purple Bread Loaf, Small, 4.84kg) - $123.54"
+  },
+  {
+    "user": "What is the cheapest item?",
+    "ai": "Welcome to our store. I'd be happy to help you find the cheapest item we have in stock. After checking our inventory, I found that our most affordable option is the Red Toothbrush, which comes in a pack and weighs 3.38kg, priced at $58.34. However, if you're looking for an even more budget-friendly option, I can also suggest our Green Toothbrush, which is available in a box and weighs 4.92kg, priced at $69.53, but we do have another Red Toothbrush that is actually cheaper, it is the Red Toothbrush (Red Toothbrush, Pack, 3.38kg) - $58.34. \n\nWould you like to take a look at it or would you like me to show you some other options?"
+  },
+  {
+    "user": "Show me snacks under $5",
+    "ai": "I'd be happy to help you find some snacks under $5. Unfortunately, it seems that our current inventory of snacks is a bit pricey, with most of our options being over $20. However, I can suggest that you might want to consider looking elsewhere for snacks that fit your budget of under $5.\n\nThat being said, I can show you some of our peanut options, although they are a bit above your budget. We have the Purple Peanuts 399g, which is a cup-sized package weighing 4.28kg, priced at $21.63. We also have the Purple Peanuts 2238g, which is a small package weighing 1.68kg, priced at $23.23.\n\nIf you're interested in other types of snacks, we do have a Red Chocolate Bar 2156g, which is a roll weighing 2.5kg, priced at $47.75. However, I understand that this is still above your budget.\n\nI apologize that we don't have any snack options under $5 at the moment. If you'd like, I can try to suggest some other stores or online retailers that might have more affordable snack options. Alternatively, you can also consider checking back with us in the future to see if we have any new snack items that fit your budget. Would you like me to look into that for you?"
   }
 ]
