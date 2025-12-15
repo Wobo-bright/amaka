@@ -1,41 +1,14 @@
-# =========================
-# Virtual environment (DO NOT TRACK)
-# =========================
 venv/
 .venv/
-
-# =========================
-# Python cache / compiled
-# =========================
 __pycache__/
 *.pyc
 *.pyo
 *.pyd
-
-# =========================
-# Data (keep inventory & embeddings out of git)
-# =========================
-
-
-# =========================
-# Environment / secrets
-# =========================
 .env
 .env.*
-
-# =========================
-# Logs
-# =========================
 *.log
-
-# =========================
-# OS / Editor noise
-# =========================
 .vscode/
 .idea/
 .DS_Store
 Thumbs.db
-
-
-
 src/.env
