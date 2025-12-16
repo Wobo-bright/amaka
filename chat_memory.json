@@ -98,5 +98,33 @@
   {
     "user": "do you sell semovita",
     "ai": "Hello there, welcome to our store. I see you're looking for semovita. Unfortunately, we don't have semovita in our current inventory. However, we do have some other food items that might be of interest to you. We have a selection of tomato pastes, including the Orange Tomato Paste 1097g, which comes in a box weighing 1.89kg for $140.41, and the Silver Tomato Paste 3807g, which is a tin weighing 1.98kg for $83.71. We also have the Brown Salt 3640g, a bottle weighing 2.63kg for $52.14. If you're looking for something else, please let me know and I'll do my best to assist you."
+  },
+  {
+    "user": "hello",
+    "ai": "Hello! Welcome to our store. It's nice to meet you. How can I assist you today? We have a variety of items available, including our Yellow AA Batteries, which come in a large pack weighing 1.04kg for $40.51, or a box weighing 2.13kg for $91.49. We also have a lovely Yellow Umbrella, available in two sizes: a 3.18kg cup for $13.7, or a 4.08kg cup for $40.58. Additionally, we have Yellow Baby Wipes, a 0.81kg cup for $77.32. Is there anything in particular you're looking for?"
+  },
+  {
+    "user": "i want a gift for my girl friend",
+    "ai": "I'd be happy to help you find a gift for your girlfriend. However, I must say that our current inventory consists of baby products, which might not be the most suitable gifts for a romantic partner.\n\nIf you're looking for something practical, I can offer you our Baby Wipes, which come in various sizes and colors. We have the Brown Baby Wipes in a 3.12kg bottle for $143.95, the Black Baby Wipes in a 2.57kg bottle for $121.75, or the Red Baby Wipes in a small 4.75kg pack for $91.3.\n\nAlternatively, if you think your girlfriend might appreciate a thoughtful gift for a future family, we have Baby Diapers available in black or purple. The Black Baby Diapers come in a 3.14kg cup for $100.93, while the Purple Baby Diapers are available in a 1.56kg bottle for $143.15.\n\nPlease let me know if any of these options appeal to you, or if you'd like me to suggest other ideas. I'm here to help!"
+  },
+  {
+    "user": "she likes electronics",
+    "ai": "Since your girlfriend likes electronics, I think I can help you with some gift ideas from our store. We have a variety of AA Batteries that might be useful for her electronic devices. \n\nWe have the Black AA Batteries in a cup weighing 2.7kg for $65.88, or in a roll weighing 1.15kg for $57.47. We also have the Red AA Batteries in a cup weighing 1.25kg for $100.4, or the Purple AA Batteries in a box weighing 3.49kg for $92.43.\n\nAdditionally, if she's often on-the-go, a reliable phone charger might be a great gift. We have a Black Phone Charger in a bottle weighing 3.57kg for $141.34.\n\nLet me know if any of these options appeal to you, and I'll be happy to help you with the purchase!"
+  },
+  {
+    "user": "lets go with the phone charger",
+    "ai": "You've decided to go with the phone charger. We have a few options available, so let me show you what we have. \n\nWe have the Black Phone Charger, which is a great option. It comes in a bottle and weighs 3.57kg, priced at $141.34. \n\nIf you're looking for something a bit more affordable, we also have the Silver Phone Charger, which comes in a box and weighs 2.86kg, priced at $88.3. \n\nAlternatively, we have the Orange Phone Charger, available in two sizes: a small one weighing 2.13kg for $89.27, and a large one weighing 0.47kg for $85.02. \n\nLastly, we also have the Red Phone Charger, which is a medium size and weighs 0.41kg, priced at $118.51.\n\nWhich one of these phone chargers would you like to purchase for your girlfriend?"
+  },
+  {
+    "user": "the best",
+    "ai": "You're looking for the best phone charger for your girlfriend. I completely understand. Based on our current inventory and your previous interest in the phone charger, I would recommend the Black Phone Charger. It's a high-quality option that comes in a bottle and weighs 3.57kg, priced at $141.34.\n\nIf you're looking for an alternative, we also have the Silver Phone Charger, which comes in a box and weighs 2.86kg, priced at $88.3. Both of these options are great, but if you're looking for the \"best,\" I would suggest the Black Phone Charger due to its higher quality and features.\n\nWould you like to proceed with the purchase of the Black Phone Charger or consider the Silver Phone Charger as an alternative?"
+  },
+  {
+    "user": "the black",
+    "ai": "You've decided to go with the Black Phone Charger. That's a great choice. The Black Phone Charger comes in a bottle and weighs 3.57kg, priced at $141.34. I'll get that ready for you. Would you like to pay with cash or card today?"
+  },
+  {
+    "user": "cash",
+    "ai": "You'd like to pay with cash for the Black Phone Charger. That'll be $141.34 please. Would you like to purchase anything else with that? Perhaps a drink to go with it? We have a Purple Coke 3873g in a roll weighing 3.52kg for $6.37, or a Purple Coke 1299g in a tin weighing 4.32kg for $31.06. Let me know if you're interested in any of these options."
   }
 ]
