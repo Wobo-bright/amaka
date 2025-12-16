@@ -1,4 +1,3 @@
-# src/bot_logic_offline.py
 import numpy as np
 import faiss
 import os
@@ -15,7 +14,7 @@ except ImportError:
     print("Groq not installed, will use offline mode only.")
 
 # --- Memory setup ---
-MEMORY_FILE = r"C:\Users\HP\Desktop\meta-hackathon\rag_bot\chat_memory.json"
+MEMORY_FILE = r"rag_bot\chat_memory.json"
 if Path(MEMORY_FILE).exists():
     with open(MEMORY_FILE, "r") as f:
         chat_memory = json.load(f)
@@ -28,7 +27,7 @@ def save_memory():
 
 # --- Loader for API key ---
 def loader(path: str):
-    """Load the GROQ_API_KEY from a .env file and return it."""
+    #the path is the loaction where you stored you .env file
     load_dotenv(path)
     return os.getenv("GROQ_API_KEY")
 
@@ -41,7 +40,7 @@ def build_faiss_index(df, embedding_col='embedding'):
     return index
 
 # --- Bot with memory ---
-def ask_bot_offline(query, df, model, index, top_k=5, dotenv_path=r"C:\Users\HP\Desktop\meta-hackathon\.env"):
+def ask_bot(query, df, model, index, top_k=5, dotenv_path=r"C:\Users\HP\Desktop\meta-hackathon\.env"):
     # Normalize column names
     df.columns = [c.lower().strip() for c in df.columns]
     name_col = next((c for c in df.columns if 'name' in c), None)
