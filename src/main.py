@@ -1,7 +1,7 @@
 # src/main_offline.py
 import pandas as pd
 from sentence_transformers import SentenceTransformer
-from bot_logic import build_faiss_index, ask_bot_offline
+from bot_logic import build_faiss_index, ask_bot
 
 # Load your dataset (with precomputed embeddings or compute embeddings here)
 df = pd.read_excel("data/inventory.xlsx")
@@ -21,6 +21,6 @@ while True:
     query = input("Ask a question (or 'exit'): ")
     if query.lower() == "exit":
         break
-    answer = ask_bot_offline(query, df, model, index)
+    answer = ask_bot(query, df, model, index)
     print(f"Answer:\n{answer}\n")
 76 
