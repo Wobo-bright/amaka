@@ -98,5 +98,41 @@
   {
     "user": "do you sell semovita",
     "ai": "Hello there, welcome to our store. I see you're looking for semovita. Unfortunately, we don't have semovita in our current inventory. However, we do have some other food items that might be of interest to you. We have a selection of tomato pastes, including the Orange Tomato Paste 1097g, which comes in a box weighing 1.89kg for $140.41, and the Silver Tomato Paste 3807g, which is a tin weighing 1.98kg for $83.71. We also have the Brown Salt 3640g, a bottle weighing 2.63kg for $52.14. If you're looking for something else, please let me know and I'll do my best to assist you."
+  },
+  {
+    "user": "hi",
+    "ai": "Here are matching items:\nUmbrella (Yellow Umbrella, Cup, 3.18kg) - $13.7\nUmbrella (Yellow Umbrella, Cup, 4.08kg) - $40.58\nSpaghetti 390g (Yellow Spaghetti 390g, Tin, 4.49kg) - $11.23\nLED Bulb (Yellow LED Bulb, Cup, 2.28kg) - $92.87\nUmbrella (Yellow Umbrella, Large, 2.79kg) - $96.16"
+  },
+  {
+    "user": "hello",
+    "ai": "Here are matching items:\nAA Batteries (Yellow AA Batteries, Large, 1.04kg) - $40.51\nAA Batteries (Yellow AA Batteries, Box, 2.13kg) - $91.49\nUmbrella (Yellow Umbrella, Cup, 3.18kg) - $13.7\nBaby Wipes (Yellow Baby Wipes, Cup, 0.81kg) - $77.32\nUmbrella (Yellow Umbrella, Cup, 4.08kg) - $40.58"
+  },
+  {
+    "user": "& \"C:/Program Files/Python313/python.exe\" c:/Users/HP/OneDrive/Desktop/Codes/Amaka/amaka/src/bot_logic.py",
+    "ai": "Here are matching items:\nTomato Paste 1097g (Orange Tomato Paste 1097g, Box, 1.89kg) - $140.41\nTomato Paste 2447g (Orange Tomato Paste 2447g, Large, 2.51kg) - $102.25\nTomato Paste 3807g (Silver Tomato Paste 3807g, Tin, 1.98kg) - $83.71\nTomato Paste 1041g (Blue Tomato Paste 1041g, Small, 4.04kg) - $108.1\nBucket (Orange Bucket, Cup, 0.94kg) - $33.59"
+  },
+  {
+    "user": "hello",
+    "ai": "Here are matching items:\nAA Batteries (Yellow AA Batteries, Large, 1.04kg) - $40.51\nAA Batteries (Yellow AA Batteries, Box, 2.13kg) - $91.49\nUmbrella (Yellow Umbrella, Cup, 3.18kg) - $13.7\nBaby Wipes (Yellow Baby Wipes, Cup, 0.81kg) - $77.32\nUmbrella (Yellow Umbrella, Cup, 4.08kg) - $40.58"
+  },
+  {
+    "user": "hello",
+    "ai": "Here are matching items:\nAA Batteries (Yellow AA Batteries, Large, 1.04kg) - $40.51\nAA Batteries (Yellow AA Batteries, Box, 2.13kg) - $91.49\nUmbrella (Yellow Umbrella, Cup, 3.18kg) - $13.7\nBaby Wipes (Yellow Baby Wipes, Cup, 0.81kg) - $77.32\nUmbrella (Yellow Umbrella, Cup, 4.08kg) - $40.58"
+  },
+  {
+    "user": "& \"C:/Program Files/Python313/python.exe\" c:/Users/HP/OneDrive/Desktop/Codes/Amaka/amaka/src/main.py",
+    "ai": "Here are matching items:\nTomato Paste 2447g (Orange Tomato Paste 2447g, Large, 2.51kg) - $102.25\nTomato Paste 1097g (Orange Tomato Paste 1097g, Box, 1.89kg) - $140.41\nTomato Paste 1041g (Blue Tomato Paste 1041g, Small, 4.04kg) - $108.1\nTomato Paste 3807g (Silver Tomato Paste 3807g, Tin, 1.98kg) - $83.71\nSpaghetti 3473g (Black Spaghetti 3473g, Pack, 1.53kg) - $68.07"
+  },
+  {
+    "user": "& \"C:/Program Files/Python313/python.exe\" c:/Users/HP/OneDrive/Desktop/Codes/Amaka/amaka/src/main.py",
+    "ai": "Here are matching items:\nTomato Paste 2447g (Orange Tomato Paste 2447g, Large, 2.51kg) - $102.25\nTomato Paste 1097g (Orange Tomato Paste 1097g, Box, 1.89kg) - $140.41\nTomato Paste 1041g (Blue Tomato Paste 1041g, Small, 4.04kg) - $108.1\nTomato Paste 3807g (Silver Tomato Paste 3807g, Tin, 1.98kg) - $83.71\nSpaghetti 3473g (Black Spaghetti 3473g, Pack, 1.53kg) - $68.07"
+  },
+  {
+    "user": "hello",
+    "ai": "Hello! Welcome to our store. I see you said hello, and I'm happy to help you with anything you might need. We have a few items that might interest you. We have AA Batteries available in two options: a large pack for $40.51 and a boxed set for $91.49. We also have Umbrellas in two sizes, one for $13.70 and a larger one for $40.58. Additionally, we have Baby Wipes available for $77.32. Is there anything in particular you're looking for today?"
+  },
+  {
+    "user": "I want to get socks",
+    "ai": "I'm afraid we don't have any socks available in our current inventory. However, we do have some other baby-related items that might be of interest to you. We have Baby Diapers available in two options: Black Baby Diapers for $63.87 and Blue Baby Diapers for $143.46. If you're looking for something else, please let me know and I'll do my best to assist you."
   }
 ]
