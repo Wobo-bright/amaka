@@ -1,43 +1,92 @@
 import argparse
 from bot_logic import ask_bot_offline, prepare_resources
+from flask import Flask, request
+from twilio.twiml.messaging_response import MessagingResponse
+
+app = Flask(__name__)
 
 
-def interactive_loop(df, model, index):
+# You can choose to remove this function as well.
+@app.route('/')
+def helloworld():
+    return "How are you doing"
+
+
+def interactive_loop(incoming_msg, df, model, index):
     while True:
         try:
-            query = input("Ask a question (or 'exit'): ")
+            #query = input("Ask a question (or 'exit'): ")
+            #incoming_msg = request
+
+            #if query is None:
+            if incoming_msg is None:
+                break
+
+            incoming_msg = incoming_msg.strip()
+            if incoming_msg == "exit":
+                break
+            if not incoming_msg:
+                print("Please enter a question or type 'exit' to quit.")
+                continue
+
+            
+            answer = ask_bot_offline(incoming_msg, df, model, index)
+            return answer
+
         except (EOFError, KeyboardInterrupt):
             print("\nExiting.")
             break
-
-        if query is None:
-            break
-
-        query = query.strip()
-        if query.lower() == "exit":
-            break
-        if not query:
-            print("Please enter a question or type 'exit' to quit.")
-            continue
-
-        answer = ask_bot_offline(query, df, model, index)
-        print(f"Answer:\n{answer}\n")
-
+        #print(f"Answer:\n{answer}\n")
 
 def main():
+    print("Bot is running...")
+    app.run(host='0.0.0.0', port=8000, debug=True)
+
+
+df, model, index = prepare_resources()
+
+
+@app.route('/whatsapp', methods=['POST'])
+def whatsapp_reply():
+    incoming_msg = request.form.get('Body', '')
+    print("Incoming:", incoming_msg)
+
+    answer = ask_bot_offline(incoming_msg, df, model, index)
+
+    resp = MessagingResponse()
+    resp.message(answer)
+
+    return str(resp), 200
+
+
+"""
+@app.route('/whatsapp', methods=['POST'])
+def whatsapp_reply():
+    #Fetch the message
+    incoming_msg = request.form.get('Body', '').lower()
+    print(incoming_msg)
+    
     parser = argparse.ArgumentParser(description="Inventory RAG bot")
-    parser.add_argument("--query", help="Run a single query in non-interactive mode")
+    parser.add_argument("--incoming_msg", help="Run a single query in non-interactive mode")
     args = parser.parse_args()
 
-    df, model, index = prepare_resources()
 
-    if args.query:
-        answer = ask_bot_offline(args.query, df, model, index)
-        print(f"Answer:\n{answer}\n")
-        return
+    answer = ""
+    if args.incoming_msg:
+        answer += ask_bot_offline(args.incoming_msg, df, model, index)
+        #print(f"Answer:\n{answer}\n")
+        #return
 
-    interactive_loop(df, model, index)
+    #Create reply
+    resp = MessagingResponse()
 
+    #final_answer = interactive_loop(incoming_msg, df, model, index)#This is the final output
+    #print(request.form)
+    resp.message(answer)
+    print(resp)
+    return str(resp), 200
+
+"""
 
 if __name__ == "__main__":
     main()
