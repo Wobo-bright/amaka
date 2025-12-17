@@ -43,11 +43,25 @@ def main():
     app.run(host='0.0.0.0', port=8000, debug=True)
 
 
+
+def business_owner():
+    print("Here the human is talking")
+    incoming_msg = request.form.get('Body', '')
+    print("Incoming:", incoming_msg)
+
+    input = ("The input from the frontend")
+
+    #answer = ask_bot_offline(incoming_msg, df, model, index)
+
+    resp = MessagingResponse()
+    resp.message(input)
+
+    return str(resp), 200
+
+
 df, model, index = prepare_resources()
 
-
-@app.route('/whatsapp', methods=['POST'])
-def whatsapp_reply():
+def bot_reply():
     incoming_msg = request.form.get('Body', '')
     print("Incoming:", incoming_msg)
 
@@ -57,6 +71,12 @@ def whatsapp_reply():
     resp.message(answer)
 
     return str(resp), 200
+
+@app.route('/whatsapp', methods=['POST'])
+def whatsapp_reply():
+    #There will be a form of trigger from the toggle, then that    
+    
+    print("Here the bot is t")
 
 
 """
