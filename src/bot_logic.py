@@ -113,11 +113,11 @@ def ask_bot_offline(query, df, model, index, top_k=5, dotenv_path: Path = ENV_PA
             client = Groq(api_key=api_key)
             prompt = f"""
 {memory_context}
-A customer asked: '{query}'
-Please respond in a friendly and helpful way, just like a real salesperson. 
-Refer only to items from the inventory below, mentioning their name, description, and price.
-Keep your tone polite and engaging, search the web for more context on products if you do not know about them:
-
+A customer asked: {query}
+Respond naturally, politely, and in a friendly, helpful salesperson tone, using Nigerian context and phrasing where appropriate.
+Mention only relevant items from the inventory, including their name, brief description, and price.
+Keep the response concise (maximum two sentences).
+If product details are unclear or context is lacking, search the internet for clarification, but do not introduce or reference items outside the inventory.
 
 {context}
 """
